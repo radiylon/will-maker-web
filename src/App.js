@@ -43,6 +43,7 @@ const GET_WILLS = gql`
 function App() {
   const [rows, setRows] = useState([]);
 
+  // fetch wills
   const { data, refetch } = useQuery(GET_WILLS);
 
   useEffect(() => {
