@@ -21,16 +21,16 @@ function DataTable({ rows, refetch }) {
     setWillEditorOpen(true);
   }
 
+  // TODO: add update UI
   function editWill(id) {
     setMode('edit');
-    // TODO: add update UI
     console.log('EDIT ROW', id);
   }
 
-  function deleteWill(id) {
-    // TODO: add delete UI
-    console.log('DELETE WILL', id);
-  }
+  // TODO: add delete UI
+  // function deleteWill(id) {
+  //   console.log('DELETE WILL', id);
+  // }
 
   return (
     <>

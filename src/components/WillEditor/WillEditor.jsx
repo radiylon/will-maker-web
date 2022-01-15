@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useQuery, useMutation } from '@apollo/react-hooks';
+import { useMutation } from '@apollo/react-hooks';
 // material
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
@@ -22,7 +22,7 @@ function WillEditor({ willId, willEditorOpen, setWillEditorOpen, mode, refetch }
   const states = ['AK','AL','AR','AZ','CA','CO','CT','DE','FL','GA','HI','IA','ID','IL','IN','KS','KY','LA','MA','MD','ME','MI',
     'MN','MO','MS','MT','NC','ND','NE','NH','NJ','NM','NV','NY','OH','OK','OR','PA','RI','SC','SD','TN','TX','UT','VA','VT','WA','WI','WV','WY'];
 
-  const [createWill, { data: createWillData }] = useMutation(CREATE_WILL, {
+  const [createWill] = useMutation(CREATE_WILL, {
     onCompleted: (data) => {
       setWill(data.createWill);
       setWillEditorOpen(false);
@@ -42,9 +42,10 @@ function WillEditor({ willId, willEditorOpen, setWillEditorOpen, mode, refetch }
     });
   }
 
-  async function _updateWill(id, input) {
-    // TODO: _updateWill
-  }
+  // TODO: _updateWill
+  // async function _updateWill(id, input) {
+  //   console.log('UPDATE WILL');
+  // }
 
   async function handleSubmit() {
     if (mode === 'create') {
