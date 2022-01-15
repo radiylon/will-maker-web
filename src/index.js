@@ -11,7 +11,7 @@ import App from './App';
 // import reportWebVitals from './reportWebVitals';
 
 const httpLink = createHttpLink({
-  uri: 'http://localhost:5001/',
+  uri: process.env.willmakerDbURI,
 });
 
 const client = new ApolloClient({
