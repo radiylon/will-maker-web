@@ -11,7 +11,7 @@ import App from './App';
 // import reportWebVitals from './reportWebVitals';
 
 const httpLink = createHttpLink({
-  uri: process.env.willmakerDbURI,
+  uri: 'https://cryptic-harbor-64175.herokuapp.com/',
 });
 
 const client = new ApolloClient({
