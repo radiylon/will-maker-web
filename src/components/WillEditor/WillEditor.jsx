@@ -185,11 +185,11 @@ function WillEditor({ willId, willEditorOpen, setWillEditorOpen, mode, refetch }
                   fullWidth
                 >
                   <MenuItem value={''}><em>None</em></MenuItem>
-                  <MenuItem value={'Married'}>Married</MenuItem>
                   <MenuItem value={'Single'}>Single</MenuItem>
+                  <MenuItem value={'Engaged'}>Engaged</MenuItem>
+                  <MenuItem value={'Married'}>Married</MenuItem>
                   <MenuItem value={'Divorced'}>Divorced</MenuItem>
                   <MenuItem value={'Widow/Widower'}>Widow/Widower</MenuItem>
-                  <MenuItem value={'Engaged'}>Engaged</MenuItem>
                   <MenuItem value={'Domestic Partnership'}>Registered Domestic Partnership</MenuItem>
                   <MenuItem value={'Civil Union'}>Civil Union</MenuItem>
                 </Select>
