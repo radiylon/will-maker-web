@@ -26,4 +26,16 @@ const GET_WILLS = gql`
   }
 `;
 
+// const GET_WILL = gql``;
+
+// const CREATE_WILL = gql``;
+
+// const UPDATE_WILL = gql``;
+
+// const DELETE_WILL = gql``;
+
+// const REGISTER_USER = gql``;
+
+// const LOGIN_USER = gql``;
+
 export { GET_WILLS };

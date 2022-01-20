@@ -9,9 +9,11 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 import { BrowserRouter } from 'react-router-dom';
 // main
 import App from './App';
+import './index.css';
 // util
 // import reportWebVitals from './reportWebVitals';
 
+// TODO: use process.env
 const httpLink = createHttpLink({
   uri: 'https://cryptic-harbor-64175.herokuapp.com/',
 });
