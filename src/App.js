@@ -15,7 +15,7 @@ import './App.css';
 function App() {
 
   return (
-    <div>
+    <div className='container mx-auto'>
       <Helmet>
         <style>{'body { background-color: #eef0f7; }'}</style>
       </Helmet>
