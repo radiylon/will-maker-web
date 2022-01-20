@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 
+// TODO: handle nav bar active states
+
 function NavBar() {
   return (
     <nav>
@@ -7,7 +9,7 @@ function NavBar() {
         <div className='flex justify-between py-7'>
           {/* logo */}
           <div className='flex space-x-10 items-center'>
-            <Link to='/' className='text-blue-500'>willadmin</Link>
+            <Link to='/' className='text-blue-600 hover:text-blue-500 text-3xl font-bold transition duration-300'>willadmin</Link>
           </div>
           {/* main nav*/}
           <div className='hidden md:flex space-x-10 items-center'>
