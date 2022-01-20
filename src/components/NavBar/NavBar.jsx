@@ -11,9 +11,9 @@ function NavBar() {
           </div>
           {/* main nav*/}
           <div className='hidden md:flex space-x-10 items-center'>
-            <Link to='/dashboard' className='text-zinc-700 hover:text-zinc-500 decoration-sky-600 transition duration-300'>Dashboard</Link>
-            <Link to='/login' className='text-zinc-700 hover:text-zinc-500 decoration-sky-600 transition duration-300'>Login</Link>
-            <Link to='/register' className='py-2 px-3 bg-blue-500 hover:bg-blue-600 text-white rounded transition duration-300'>Sign Up</Link>
+            <Link to='/dashboard' className='text-zinc-700 hover:text-zinc-400 transition duration-300'>Dashboard</Link>
+            <Link to='/login' className='text-zinc-700 hover:text-zinc-400 transition duration-300'>Login</Link>
+            <Link to='/register' className='py-2 px-3 bg-blue-600 hover:bg-blue-500 text-white rounded transition duration-300'>Sign Up</Link>
           </div>
         </div>
       </div>
