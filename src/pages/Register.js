@@ -1,14 +1,20 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 // gql
 import { useMutation } from '@apollo/react-hooks';
 // react-router
 import { useNavigate } from 'react-router-dom';
 // main
 // import AuthForm from '../components/AuthForm/AuthForm';
+import { UserContext } from '../context/UserContext';
 // queries
 import { REGISTER_USER } from '../queries';
 
-function Register(props) {
+function Register() {
+
+  // TODO: separate form out into it's own component
+
+  const context = useContext(UserContext);
+
   const [formValues, setFormValues] = useState({
     username: '',
     email: '',
@@ -18,12 +24,12 @@ function Register(props) {
 
   // react-router navigate
   const navigate = useNavigate();
-  
+
   // TODO: use loading state
   const [registerUser] = useMutation(REGISTER_USER, {
     onCompleted: (data) => {
-      console.log('USER SUCCESSFULLY REGISTERED', data);
-      navigate('/');
+      context.loginUser(data.registerUser);
+      navigate('/dashboard');
     },
     variables: {
       input: formValues,
@@ -31,7 +37,6 @@ function Register(props) {
   });
 
   async function onSubmit(e) {
-    console.log('register onSubmit');
     e.preventDefault();
     await registerUser();
   }

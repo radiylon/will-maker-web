@@ -1,26 +1,29 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 // gql
 import { useMutation } from '@apollo/react-hooks';
 // react-router
 import { useNavigate } from 'react-router-dom';
 // main
 // import AuthForm from '../components/AuthForm/AuthForm';
+import { UserContext } from '../context/UserContext';
 // queries
 import { LOGIN_USER } from '../queries';
 
 function Login() {
+  const context = useContext(UserContext);
+
   const [formValues, setFormValues] = useState({
     username: '',
     password: '',
   });
-  
+
   // react-router navigate
   const navigate = useNavigate();
 
   // TODO: use loading state
   const [loginUser] = useMutation(LOGIN_USER, {
     onCompleted: (data) => {
-      console.log('USER SUCCESSFULLY LOGGED IN', data);
+      context.loginUser(data.loginUser);
       navigate('/');
     },
     onError: (err) => {
@@ -33,7 +36,6 @@ function Login() {
   });
 
   async function onSubmit(e) {
-    console.log('login onSubmit');
     e.preventDefault();
     await loginUser();
   }

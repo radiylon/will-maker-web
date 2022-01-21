@@ -21,18 +21,103 @@ const GET_WILLS = gql`
       phoneNumber
       email
       isCompleted
+      isEditable
+    }
+  }
+`;
+
+const GET_WILL = gql`
+  query getWill($id: ID!) {
+    getWill(id: $id) {
+      id
+      firstName
+      middleName
+      lastName
+      suffix
+      preferredName
+      birthDate
+      relationshipStatus
+      hasChildren
+      children {
+        fullName
+        birthDate
+      }
+      stateOfResidence
+      hasAttorneyAddOn
+      phoneNumber
+      email
+      isCompleted
       isEditable 
     }
   }
 `;
 
-// const GET_WILL = gql``;
+const GET_WILL_BY_USER_ID = gql`
+  query getWillByUserId($id: ID!) {
+    getWillByUserId(id: $id) {
+      id
+      firstName
+      middleName
+      lastName
+      suffix
+      preferredName
+      birthDate
+      relationshipStatus
+      hasChildren
+      children {
+        fullName
+        birthDate
+      }
+      stateOfResidence
+      hasAttorneyAddOn
+      phoneNumber
+      email
+      isCompleted
+      isEditable 
+    }
+  }
+`;
 
-// const CREATE_WILL = gql``;
+const CREATE_WILL = gql`
+  mutation createWill($input: WillInput) {
+    createWill(input: $input) {
+      id
+      firstName
+      lastName
+      suffix
+      preferredName
+      email
+      birthDate
+      relationshipStatus
+      hasChildren
+      children {
+        fullName
+        birthDate
+      }
+      stateOfResidence
+      hasAttorneyAddOn
+      phoneNumber
+      isCompleted
+      isEditable  
+    }
+  }
+`;
 
-// const UPDATE_WILL = gql``;
+const UPDATE_WILL = gql`
+  mutation updateWill($id: ID!, $input: WillInput) {
+    updateWill(id: $id, input: $input) {
+      id
+    }
+  }
+`;
 
-// const DELETE_WILL = gql``;
+const DELETE_WILL = gql`
+  mutation deleteWill($id: ID!) {
+    deleteWill(id: $id) {
+      id
+    }
+  }
+`;
 
 const REGISTER_USER = gql`
   mutation registerUser($input: RegisterInput) {
@@ -61,4 +146,4 @@ const LOGIN_USER = gql`
   }
 `;
 
-export { GET_WILLS, REGISTER_USER, LOGIN_USER };
+export { GET_WILLS, GET_WILL, GET_WILL_BY_USER_ID, CREATE_WILL, UPDATE_WILL, DELETE_WILL, REGISTER_USER, LOGIN_USER };
