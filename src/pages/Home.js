@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { GET_WILLS } from '../queries';
 // main
-import DataTable from '../components/DataTable/DataTable';
+// import DataTable from '../components/DataTable/DataTable';
 
 function Home() {
   const [rows, setRows] = useState([]);
@@ -22,7 +22,7 @@ function Home() {
     <div>
       <h1>HOME</h1>
       <h1>{loading ? 'LOADING...' : ''}</h1>
-      <DataTable rows={rows} refetch={refetch} />
+      {/* <DataTable rows={rows} refetch={refetch} /> */}
     </div>
   )
 }
