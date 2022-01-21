@@ -124,7 +124,7 @@ function Dashboard() {
               <div className='text-right mt-4'>
                 {/* TODO: Refactor into reusable button */}
                 <button 
-                  className='px-6 py-2 text-white text-sm bg-blue-600 rounded-lg hover:bg-blue-500 transition duration-300'
+                  className='px-6 py-2 text-white text-sm bg-green-600 rounded-lg hover:bg-green-500 transition duration-300'
                   onClick={handleWill}
                 >
                   {will?.id ? 'Update' : 'Start'}

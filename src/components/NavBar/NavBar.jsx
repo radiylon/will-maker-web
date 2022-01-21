@@ -17,7 +17,7 @@ function NavBar() {
           <div className='flex space-x-10 items-center'>
             <Link to='/' className='hover:opacity-75 text-2xl font-bold transition duration-300'>
               <span className='text-zinc-900'>will</span>
-              <span className='text-blue-600'>maker</span>
+              <span className='text-green-600'>maker</span>
             </Link>
           </div>
           {/* main nav*/}
@@ -32,7 +32,7 @@ function NavBar() {
               <>
                 <Link to='/login' className='text-zinc-700 hover:text-zinc-400 text-sm transition duration-300'>Login</Link>
                 <Link to='/register'>
-                  <button className='px-6 py-2 text-white text-sm bg-blue-600 rounded-lg hover:bg-blue-500 transition duration-300'>Sign Up</button>
+                  <button className='px-6 py-2 text-white text-sm bg-green-600 rounded-lg hover:bg-green-500 transition duration-300'>Sign Up</button>
                 </Link>  
               </>
             )}

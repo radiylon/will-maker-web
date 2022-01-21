@@ -56,7 +56,7 @@ function Register() {
                   id='username'
                   type='text'
                   placeholder='Username'
-                  className='w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 transition duration-300'
+                  className='w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-green-500 transition duration-300'
                   value={formValues.username ?? ''}
                   onChange={(e) => setFormValues({ ...formValues, username: e.target.value })}
                   autoFocus
@@ -71,7 +71,7 @@ function Register() {
                   id='email'
                   type='email'
                   placeholder='Email'
-                  className='w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 transition duration-300'
+                  className='w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-green-500 transition duration-300'
                   value={formValues.email ?? ''}
                   onChange={(e) => setFormValues({ ...formValues, email: e.target.value })}
                 />
@@ -85,7 +85,7 @@ function Register() {
                   id='password'
                   type='password'
                   placeholder='Password'
-                  className='w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 transition duration-300'
+                  className='w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-green-500 transition duration-300'
                   value={formValues.password ?? ''}
                   onChange={(e) => setFormValues({ ...formValues, password: e.target.value })}
                 />
@@ -99,7 +99,7 @@ function Register() {
                   id='confirm-password'
                   type='password'
                   placeholder='Password'
-                  className='w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 transition duration-300'
+                  className='w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-green-500 transition duration-300'
                   value={formValues.confirmPassword ?? ''}
                   onChange={(e) => setFormValues({ ...formValues, confirmPassword: e.target.value })}
                 />
@@ -110,7 +110,7 @@ function Register() {
               <input
                 type='submit'
                 value='Submit' 
-                className='px-6 py-2 mt-5 text-white bg-blue-600 rounded-lg hover:bg-blue-500 transition duration-300'
+                className='px-6 py-2 mt-5 text-white bg-green-600 rounded-lg hover:bg-green-500 transition duration-300'
               />
             </div>
           </form>

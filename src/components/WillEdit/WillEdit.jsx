@@ -25,7 +25,7 @@ function WillEdit({ will, setWill, setMode, onSubmit }) {
   return (
     <div>
       <button 
-        className='px-6 py-2 text-white text-sm bg-blue-600 rounded-lg hover:bg-blue-500 transition duration-300'
+        className='px-6 py-2 text-white text-sm bg-green-600 rounded-lg hover:bg-green-500 transition duration-300'
         onClick={() => setMode('dashboard')}
       >
         Go Back
@@ -45,7 +45,7 @@ function WillEdit({ will, setWill, setMode, onSubmit }) {
                     id='firstName'
                     type='text'
                     placeholder='First Name'
-                    className='w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 transition duration-300'
+                    className='w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-green-500 transition duration-300'
                     value={firstName ?? ''}
                     onChange={(e) => setWill({ ...will, firstName: e.target.value })}
                     autoFocus
@@ -60,7 +60,7 @@ function WillEdit({ will, setWill, setMode, onSubmit }) {
                     id='middleName'
                     type='text'
                     placeholder='Middle Name'
-                    className='w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 transition duration-300'
+                    className='w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-green-500 transition duration-300'
                     value={middleName ?? ''}
                     onChange={(e) => setWill({ ...will, middleName: e.target.value })}
                   />
@@ -74,7 +74,7 @@ function WillEdit({ will, setWill, setMode, onSubmit }) {
                     id='lastName'
                     type='text'
                     placeholder='Last Name'
-                    className='w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 transition duration-300'
+                    className='w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-green-500 transition duration-300'
                     value={lastName ?? ''}
                     onChange={(e) => setWill({ ...will, lastName: e.target.value })}
                   />
@@ -88,7 +88,7 @@ function WillEdit({ will, setWill, setMode, onSubmit }) {
                     id='suffix'
                     type='text'
                     placeholder='Suffix'
-                    className='w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 transition duration-300'
+                    className='w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-green-500 transition duration-300'
                     value={suffix ?? ''}
                     onChange={(e) => setWill({ ...will, suffix: e.target.value })}
                   />
@@ -102,7 +102,7 @@ function WillEdit({ will, setWill, setMode, onSubmit }) {
                     id='preferredName'
                     type='text'
                     placeholder='Preferred Name'
-                    className='w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 transition duration-300'
+                    className='w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-green-500 transition duration-300'
                     value={preferredName ?? ''}
                     onChange={(e) => setWill({ ...will, preferredName: e.target.value })}
                   />
@@ -116,7 +116,7 @@ function WillEdit({ will, setWill, setMode, onSubmit }) {
                     id='email'
                     type='email'
                     placeholder='Email'
-                    className='w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 transition duration-300'
+                    className='w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-green-500 transition duration-300'
                     value={email ?? ''}
                     onChange={(e) => setWill({ ...will, email: e.target.value })}
                   />
@@ -130,7 +130,7 @@ function WillEdit({ will, setWill, setMode, onSubmit }) {
                     id='phone'
                     type='tel'
                     placeholder='Phone Number'
-                    className='w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 transition duration-300'
+                    className='w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-green-500 transition duration-300'
                     value={phoneNumber ?? ''}
                     onChange={(e) => setWill({ ...will, phoneNumber: e.target.value })}
                   />
@@ -144,7 +144,7 @@ function WillEdit({ will, setWill, setMode, onSubmit }) {
                     id='stateOfResidence'
                     type='text'
                     placeholder='State of Residence'
-                    className='w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 transition duration-300'
+                    className='w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-green-500 transition duration-300'
                     value={stateOfResidence ?? ''}
                     onChange={(e) => setWill({ ...will, stateOfResidence: e.target.value })}
                   />
@@ -155,7 +155,7 @@ function WillEdit({ will, setWill, setMode, onSubmit }) {
             <div className='flex justify-center'>
               <button
                 type='submit'
-                className='px-6 py-2 mt-5 text-white bg-blue-600 rounded-lg hover:bg-blue-500 transition duration-300'
+                className='px-6 py-2 mt-5 text-white bg-green-600 rounded-lg hover:bg-green-500 transition duration-300'
               >
                 Submit
               </button>
