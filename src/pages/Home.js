@@ -10,7 +10,7 @@ function Home() {
   const [rows, setRows] = useState([]);
 
   // fetch wills
-  const { data, refetch } = useQuery(GET_WILLS);
+  const { data, loading, refetch } = useQuery(GET_WILLS);
 
   useEffect(() => {
     if (data?.getWills) {
@@ -21,7 +21,8 @@ function Home() {
   return (
     <div>
       <h1>HOME</h1>
-      {/* <DataTable rows={rows} refetch={refetch} /> */}
+      <h1>{loading ? 'LOADING...' : ''}</h1>
+      <DataTable rows={rows} refetch={refetch} />
     </div>
   )
 }

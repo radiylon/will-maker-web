@@ -29,9 +29,6 @@ function App() {
           <Route path={'*'} element={<PageNotFound />} />
         </Routes>
       </main>
-      <footer>
-        <h1>FOOTER</h1>
-      </footer>
     </div>
   );
 }

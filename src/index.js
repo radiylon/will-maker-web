@@ -16,6 +16,7 @@ import './index.css';
 // TODO: use process.env
 const httpLink = createHttpLink({
   uri: 'https://cryptic-harbor-64175.herokuapp.com/',
+  // uri: 'http://localhost:5001/',
 });
 
 const client = new ApolloClient({

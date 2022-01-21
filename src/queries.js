@@ -34,8 +34,31 @@ const GET_WILLS = gql`
 
 // const DELETE_WILL = gql``;
 
-// const REGISTER_USER = gql``;
+const REGISTER_USER = gql`
+  mutation registerUser($input: RegisterInput) {
+    registerUser(input: $input) {
+      id
+      username
+      email
+      password
+      token
+      createdAt
+      isAdmin
+    }
+  }
+`;
 
-// const LOGIN_USER = gql``;
+const LOGIN_USER = gql`
+  mutation loginUser($username: String, $password: String) {
+    loginUser(username: $username, password: $password) {
+      id
+      username
+      email
+      password
+      token
+      isAdmin
+    }
+  }
+`;
 
-export { GET_WILLS };
+export { GET_WILLS, REGISTER_USER, LOGIN_USER };
