@@ -24,7 +24,7 @@ function Login() {
   const [loginUser] = useMutation(LOGIN_USER, {
     onCompleted: (data) => {
       context.loginUser(data.loginUser);
-      navigate('/');
+      navigate('/dashboard');
     },
     onError: (err) => {
       throw new Error(err);
