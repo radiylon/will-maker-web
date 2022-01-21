@@ -11,11 +11,10 @@ function Login() {
     username: '',
     password: '',
   });
-  console.log('login formValues', formValues);
   // TODO: use loading state
   const [loginUser] = useMutation(LOGIN_USER, {
-    onCompleted: (data) => {
-      console.log('loginUser data', data);
+    onCompleted: () => {
+      console.log('USER SUCCESSFULLY LOGGED IN');
     },
     onError: (err) => {
       throw new Error(err);
@@ -26,7 +25,7 @@ function Login() {
   });
 
   async function onSubmit(e) {
-    console.log('LOGIN');
+    console.log('login onSubmit');
     e.preventDefault();
     await loginUser();
   }

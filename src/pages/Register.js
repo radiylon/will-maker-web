@@ -15,8 +15,8 @@ function Register() {
   });
   // TODO: use loading state
   const [registerUser] = useMutation(REGISTER_USER, {
-    onCompleted: (data) => {
-      console.log('registerUser', data);
+    onCompleted: () => {
+      console.log('USER SUCCESSFULLY REGISTERED');
     },
     variables: {
       input: formValues,
@@ -24,6 +24,7 @@ function Register() {
   });
 
   async function onSubmit(e) {
+    console.log('register onSubmit');
     e.preventDefault();
     await registerUser();
   }
