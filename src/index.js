@@ -15,9 +15,7 @@ import './index.css';
 // util
 // import reportWebVitals from './reportWebVitals';
 
-// TODO: use process.env
 const httpLink = createHttpLink({
-  // uri: 'https://cryptic-harbor-64175.herokuapp.com/',
   uri: process.env.REACT_APP_GRAPHQL_SERVER,
 });
 
