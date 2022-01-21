@@ -29,8 +29,6 @@ function Dashboard() {
     }
   });
 
-  console.log('will', will);
-
   const [createWill] = useMutation(CREATE_WILL, {
     onCompleted: (data) => {
       console.log('WILL CREATED', data);
