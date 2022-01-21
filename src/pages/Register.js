@@ -1,22 +1,29 @@
 import { useState } from 'react';
 // gql
 import { useMutation } from '@apollo/react-hooks';
+// react-router
+import { useNavigate } from 'react-router-dom';
 // main
 // import AuthForm from '../components/AuthForm/AuthForm';
 // queries
 import { REGISTER_USER } from '../queries';
 
-function Register() {
+function Register(props) {
   const [formValues, setFormValues] = useState({
     username: '',
     email: '',
     password: '',
     confirmPassword: '',
   });
+
+  // react-router navigate
+  const navigate = useNavigate();
+  
   // TODO: use loading state
   const [registerUser] = useMutation(REGISTER_USER, {
-    onCompleted: () => {
-      console.log('USER SUCCESSFULLY REGISTERED');
+    onCompleted: (data) => {
+      console.log('USER SUCCESSFULLY REGISTERED', data);
+      navigate('/');
     },
     variables: {
       input: formValues,
@@ -35,7 +42,7 @@ function Register() {
         <div className='w-1/2 px-20 py-6 mt-4 text-left bg-white shadow-lg rounded-lg'>
           {/* TITLE */}
           <h3 className='text-2xl font-bold text-center'>Register</h3>
-          <form autoComplete='off'>
+          <form autoComplete='off' onSubmit={onSubmit}>
             {/* USERNAME */}
             <div className='mt-4'>
               <div>
@@ -95,12 +102,11 @@ function Register() {
             </div>
             {/* SUBMIT BUTTON */}
             <div className='flex justify-center'>
-              <button
+              <input
+                type='submit'
+                value='Submit' 
                 className='px-6 py-2 mt-5 text-white bg-blue-600 rounded-lg hover:bg-blue-500 transition duration-300'
-                onClick={(e) => onSubmit(e)}
-              >
-                Submit
-              </button>
+              />
             </div>
           </form>
         </div>

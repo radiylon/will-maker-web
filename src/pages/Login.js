@@ -1,6 +1,8 @@
 import { useState } from 'react';
 // gql
 import { useMutation } from '@apollo/react-hooks';
+// react-router
+import { useNavigate } from 'react-router-dom';
 // main
 // import AuthForm from '../components/AuthForm/AuthForm';
 // queries
@@ -11,16 +13,22 @@ function Login() {
     username: '',
     password: '',
   });
+  
+  // react-router navigate
+  const navigate = useNavigate();
+
   // TODO: use loading state
   const [loginUser] = useMutation(LOGIN_USER, {
-    onCompleted: () => {
-      console.log('USER SUCCESSFULLY LOGGED IN');
+    onCompleted: (data) => {
+      console.log('USER SUCCESSFULLY LOGGED IN', data);
+      navigate('/');
     },
     onError: (err) => {
       throw new Error(err);
     },
     variables: {
-      input: formValues,
+      username: formValues.username,
+      password: formValues.password,
     },
   });
 
@@ -36,7 +44,7 @@ function Login() {
         <div className='w-1/2 px-20 py-6 mt-4 text-left bg-white shadow-lg rounded-lg'>
           {/* TITLE */}
           <h3 className='text-2xl font-bold text-center'>Login</h3>
-          <form autoComplete='off'>
+          <form autoComplete='off' onSubmit={onSubmit}>
             {/* USERNAME */}
             <div className='mt-4'>
               <div>
@@ -68,12 +76,11 @@ function Login() {
             </div>
             {/* SUBMIT BUTTON */}
             <div className='flex justify-center'>
-              <button
+              <input
+                type='submit'
+                value='Submit' 
                 className='px-6 py-2 mt-5 text-white bg-blue-600 rounded-lg hover:bg-blue-500 transition duration-300'
-                onClick={(e) => onSubmit(e)}
-              >
-                Submit
-              </button>
+              />
             </div>
           </form>
         </div>
