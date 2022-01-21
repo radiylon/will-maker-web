@@ -2,7 +2,7 @@ import { useState } from 'react';
 // gql
 import { useMutation } from '@apollo/react-hooks';
 // main
-import AuthForm from '../components/AuthForm/AuthForm';
+// import AuthForm from '../components/AuthForm/AuthForm';
 // queries
 import { LOGIN_USER } from '../queries';
 
@@ -13,7 +13,7 @@ function Login() {
   });
   console.log('login formValues', formValues);
   // TODO: use loading state
-  const [loginUser, { loading }] = useMutation(LOGIN_USER, {
+  const [loginUser] = useMutation(LOGIN_USER, {
     onCompleted: (data) => {
       console.log('loginUser data', data);
     },

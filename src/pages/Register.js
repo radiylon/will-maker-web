@@ -2,7 +2,7 @@ import { useState } from 'react';
 // gql
 import { useMutation } from '@apollo/react-hooks';
 // main
-import AuthForm from '../components/AuthForm/AuthForm';
+// import AuthForm from '../components/AuthForm/AuthForm';
 // queries
 import { REGISTER_USER } from '../queries';
 
@@ -14,7 +14,7 @@ function Register() {
     confirmPassword: '',
   });
   // TODO: use loading state
-  const [registerUser, { loading }] = useMutation(REGISTER_USER, {
+  const [registerUser] = useMutation(REGISTER_USER, {
     onCompleted: (data) => {
       console.log('registerUser', data);
     },
