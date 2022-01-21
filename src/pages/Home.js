@@ -9,8 +9,10 @@ import { GET_WILLS } from '../queries';
 function Home() {
   const [rows, setRows] = useState([]);
 
+  console.log('rows', rows);
+
   // fetch wills
-  const { data, loading, refetch } = useQuery(GET_WILLS);
+  const { data, loading } = useQuery(GET_WILLS);
 
   useEffect(() => {
     if (data?.getWills) {
