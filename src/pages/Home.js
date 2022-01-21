@@ -13,8 +13,8 @@ function Home() {
         <h3 className='w-full my-12 text-5xl text-center font-bold text-green-700'>
           <span>Get started and be a </span>
           <span className='hover:opacity-75 transition duration-300'>
-            <Link to={user ? '/dashboard' : '/login'} className='underline underline-offset-8 decoration-pink-500/80'>
-              <span className='text-pink-500'>will</span><span className='text-pink-400'>maker</span>  
+            <Link to={user ? '/dashboard' : '/login'} className='underline underline-offset-8 decoration-purple-500/80'>
+              <span className='text-purple-500'>will</span><span className='text-purple-400'>maker</span>  
             </Link>
           </span>
           <span> today.</span>  
