@@ -7,8 +7,6 @@ import {
   CREATE_WILL,
   UPDATE_WILL
 } from '../queries';
-// react-router
-import { useNavigate } from 'react-router-dom';
 // main
 import { UserContext } from '../context/UserContext';
 import WillCreate from '../components/WillCreate/WillCreate';
@@ -20,9 +18,6 @@ function Dashboard() {
   const [mode, setMode] = useState('dashboard');
   const [will, setWill] = useState();
 
-  // react-router navigate
-  const navigate = useNavigate();
-
   const { data, refetch } = useQuery(GET_WILL_BY_USER_ID, {
     variables: {
       id: user.id
@@ -32,7 +27,7 @@ function Dashboard() {
   const [createWill] = useMutation(CREATE_WILL, {
     onCompleted: (data) => {
       console.log('WILL CREATED', data);
-      navigate('/dashboard');
+      setMode('dashboard');
       refetch();
     }
   });
@@ -40,7 +35,7 @@ function Dashboard() {
   const [updateWill] = useMutation(UPDATE_WILL, {
     onCompleted: (data) => {
       console.log('WILL UPDATED', data);
-      navigate('/dashboard');
+      setMode('dashboard');
       refetch();
     }
   });
