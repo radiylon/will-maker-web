@@ -2,6 +2,12 @@
 
 MVP for willmaker, made up SaaS product for Executors to manage multiple wills.
 
+TODO:
+- Admin Dashboard (DataTable, assign will to user, etc.)
+- Use Apollo validations client-side
+- Flesh out the main will builder
+- Styling + dark mode
+
 Stack:  React (JavaScript), Apollo GraphQL, MongoDB, TailwindCSS, Heroku, Netlify
 
 [Project Demo](https://willmaker.netlify.app/)
