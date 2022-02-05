@@ -9,7 +9,7 @@ TODO:
 - Flesh out the main will builder
 - Styling + dark mode
 
-Stack:  React (JavaScript), Apollo GraphQL, MongoDB, TailwindCSS, Heroku, Netlify
+Stack:  React (JavaScript), Apollo GraphQL, MongoDB, Tailwind CSS, Heroku, Netlify
 
 [Project Demo](https://willmaker.netlify.app/)
 
